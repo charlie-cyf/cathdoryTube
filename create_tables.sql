@@ -7,7 +7,7 @@ drop table ItemsInPurchase;
 drop table Offer;
 drop table Purchase CASCADE constraints;
 drop table ItemsInDeal;
-drop table Member CASCADE constraints;
+drop table Membership CASCADE constraints;
 drop table MemberPurchase;
 
 CREATE TABLE Item
@@ -108,7 +108,7 @@ CREATE TABLE ItemsInPurchase (
 
 grant select on ItemsInPurchase to public;
 
-CREATE TABLE Member (
+CREATE TABLE Membership (
 	memberID INTEGER PRIMARY KEY,
 	name CHAR(20),
 	phone CHAR(20),
@@ -116,14 +116,14 @@ CREATE TABLE Member (
 	UNIQUE (name, phone)
 );
 
-grant select on Member to public;
+grant select on Membership to public;
 
 CREATE TABLE MemberPurchase (
 	receiptNumber INTEGER PRIMARY KEY,
 	memberID INTEGER NOT NULL,
 	FOREIGN KEY (receiptNumber) REFERENCES Purchase
 		ON DELETE CASCADE,
-	FOREIGN KEY (memberID) REFERENCES Member
+	FOREIGN KEY (memberID) REFERENCES Membership
 		ON DELETE CASCADE
 );
 
