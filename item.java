@@ -199,7 +199,7 @@ public class item implements ActionListener
                 System.out.print("2.  Delete Item\n");
                 System.out.print("3.  Update Item price\n");
                 System.out.print("4.  Find Item\n");
-                System.out.print("5.  Show branch\n");
+                System.out.print("5.  Show ALl Items\n");
                 System.out.print("6.  Quit\n");
 
                 choice = Integer.parseInt(in.readLine());
