@@ -461,7 +461,8 @@ public class item implements ActionListener
                 System.out.printf("%-20.20s", itemPrice);
 
                 itemType = rs.getString("type");
-                System.out.printf("%-15.15s", itemType);
+                System.out.printf("%-15.15s\n", itemType);
+
 
             }
 
@@ -532,7 +533,7 @@ public class item implements ActionListener
                 System.out.printf("%-20.20s", itemPrice);
 
                 itemType = rs.getString("type");
-                System.out.printf("%-15.15s", itemID);
+                System.out.printf("%-15.15s", itemType);
 
             }
 
